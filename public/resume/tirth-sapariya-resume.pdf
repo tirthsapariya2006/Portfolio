@@ -1,0 +1,99 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1659 >>
+stream
+BT
+/F1 22 Tf
+50 720 Td
+(TIRTH SAPARIYA) Tj
+/F1 11 Tf
+0 -22 Td
+(Full-Stack Developer | tirthsapariya07@gmail.com | India) Tj
+0 -16 Td
+(GitHub: github.com/tirthsapariya2006 | LinkedIn: linkedin.com/in/tirth-sapariya-01b045430) Tj
+
+/F1 13 Tf
+0 -32 Td
+(PROFESSIONAL SUMMARY) Tj
+/F1 10 Tf
+0 -16 Td
+(Web developer focused on building responsive and scalable applications with React.js, Node.js, and MongoDB.) Tj
+0 -13 Td
+(Developing clean, efficient, and user-friendly digital solutions with continuous learning mindset.) Tj
+
+/F1 13 Tf
+0 -28 Td
+(WORK EXPERIENCE) Tj
+/F1 11 Tf
+0 -16 Td
+(SPARK DIGISHINE - Web Development Intern) Tj
+/F1 10 Tf
+0 -14 Td
+(Duration: 1 May 2026 - 31 July 2026) Tj
+0 -14 Td
+(Worked as a Web Development Intern, gaining practical experience in modern web development) Tj
+0 -13 Td
+(and contributing to web-based projects.) Tj
+
+/F1 13 Tf
+0 -28 Td
+(FEATURED PROJECT) Tj
+/F1 11 Tf
+0 -16 Td
+(Travelix - Trip Booking System) Tj
+/F1 10 Tf
+0 -14 Td
+(Tech Stack: React.js, Vite, Tailwind CSS, Node.js, Express.js, MongoDB, Firebase Auth, Razorpay) Tj
+0 -14 Td
+(Web application to discover, explore, and book travel packages online with wishlist and rating system.) Tj
+0 -14 Td
+(Live URL: https://travelix-frontend-gbul.vercel.app/) Tj
+
+/F1 13 Tf
+0 -28 Td
+(EDUCATION) Tj
+/F1 11 Tf
+0 -16 Td
+(Computer Engineering - LDRP-ITR / KSV) Tj
+/F1 10 Tf
+0 -14 Td
+(Duration: 2023 - 2027) Tj
+
+/F1 13 Tf
+0 -28 Td
+(TECHNICAL SKILLS) Tj
+/F1 10 Tf
+0 -16 Td
+(Frontend: React.js, Next.js, TypeScript, Tailwind CSS, Vite) Tj
+0 -14 Td
+(Backend: Node.js, Express.js | Database: MongoDB) Tj
+0 -14 Td
+(Tools & Services: Git, Postman, Firebase Authentication, Razorpay) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000229 00000 n 
+0000000300 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+380
+%%EOF
