@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { portfolioData } from "@/data/portfolio";
 
 interface RepoData {
-  id: number;
+  id: number | string;
   name: string;
   description: string | null;
   html_url: string;
@@ -16,30 +16,54 @@ interface RepoData {
   language: string | null;
 }
 
-// Curated fallback data matching Tirth's real repositories so the section always looks great even under rate limits
-const FALLBACK_REPOS: RepoData[] = [
+// Curated repository data for TravelixFrontend, TravelixBackend, and Portfolio
+const TARGET_REPOS: RepoData[] = [
   {
-    id: 101,
+    id: "travelix-frontend",
     name: "TravelixFrontend",
-    description: "Trip Booking System web application client built with React.js, Vite, and Tailwind CSS.",
+    description: "Trip & Hotel Booking System web application client built with React.js, Vite, and Tailwind CSS.",
     html_url: "https://github.com/tirthsapariya2006/TravelixFrontend",
     stargazers_count: 0,
     forks_count: 0,
-    language: "JavaScript",
+    language: "TypeScript",
   },
   {
-    id: 102,
+    id: "travelix-backend",
     name: "TravelixBackend",
     description: "RESTful API backend for Travelix booking engine built with Node.js, Express, and MongoDB.",
     html_url: "https://github.com/tirthsapariya2006/TravelixBackend",
     stargazers_count: 0,
     forks_count: 0,
-    language: "JavaScript",
+    language: "TypeScript",
+  },
+  {
+    id: "portfolio",
+    name: "Portfolio",
+    description: "Personal developer portfolio built with Next.js 16, TypeScript, Tailwind CSS, and Framer Motion.",
+    html_url: "https://github.com/tirthsapariya2006/Portfolio",
+    stargazers_count: 0,
+    forks_count: 0,
+    language: "TypeScript",
   },
 ];
 
+const getLanguageColor = (lang: string | null) => {
+  switch (lang?.toLowerCase()) {
+    case "typescript":
+      return "bg-[#3178C6]";
+    case "javascript":
+      return "bg-[#F7DF1E]";
+    case "html":
+      return "bg-[#E34F26]";
+    case "css":
+      return "bg-[#563D7C]";
+    default:
+      return "bg-sky-500";
+  }
+};
+
 export function GithubShowcase() {
-  const [repos, setRepos] = useState<RepoData[]>([]);
+  const [repos, setRepos] = useState<RepoData[]>(TARGET_REPOS);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -47,16 +71,16 @@ export function GithubShowcase() {
 
     async function fetchRepos() {
       try {
-        const res = await fetch("https://api.github.com/users/tirthsapariya2006/repos?sort=updated&per_page=4", {
+        // Fetch all public repos to extract live stars/forks for the target repositories
+        const res = await fetch("https://api.github.com/users/tirthsapariya2006/repos?per_page=100", {
           headers: {
             Accept: "application/vnd.github.v3+json",
           },
         });
 
         if (!res.ok) {
-          // If rate-limited (403) or error, seamlessly fall back to curated data
           if (isMounted) {
-            setRepos(FALLBACK_REPOS);
+            setRepos(TARGET_REPOS);
             setLoading(false);
           }
           return;
@@ -64,16 +88,34 @@ export function GithubShowcase() {
 
         const data = await res.json();
         if (isMounted) {
-          if (Array.isArray(data) && data.length > 0) {
-            setRepos(data);
+          if (Array.isArray(data)) {
+            // Merge live GitHub stats into the 3 target repos
+            const merged = TARGET_REPOS.map((target) => {
+              const liveMatch = data.find(
+                (r: { name: string }) => r.name.toLowerCase() === target.name.toLowerCase()
+              );
+              if (liveMatch) {
+                return {
+                  ...target,
+                  id: liveMatch.id ?? target.id,
+                  description: liveMatch.description || target.description,
+                  html_url: liveMatch.html_url || target.html_url,
+                  stargazers_count: liveMatch.stargazers_count ?? target.stargazers_count,
+                  forks_count: liveMatch.forks_count ?? target.forks_count,
+                  language: liveMatch.language || target.language,
+                };
+              }
+              return target;
+            });
+            setRepos(merged);
           } else {
-            setRepos(FALLBACK_REPOS);
+            setRepos(TARGET_REPOS);
           }
           setLoading(false);
         }
       } catch {
         if (isMounted) {
-          setRepos(FALLBACK_REPOS);
+          setRepos(TARGET_REPOS);
           setLoading(false);
         }
       }
@@ -95,10 +137,10 @@ export function GithubShowcase() {
           description="Public repositories and active codebases on GitHub. Always available and updated."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           {loading ? (
-            // Skeletons
-            [1, 2].map((n) => (
+            // Skeletons for 3 repos
+            [1, 2, 3].map((n) => (
               <div
                 key={n}
                 className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 p-6 space-y-4 animate-pulse"
@@ -135,7 +177,7 @@ export function GithubShowcase() {
 
                 <div className="flex items-center justify-between pt-4 mt-4 border-t border-zinc-200/60 dark:border-zinc-800/60 text-xs text-zinc-500 dark:text-zinc-400">
                   <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-sky-500" />
+                    <span className={`w-2.5 h-2.5 rounded-full ${getLanguageColor(repo.language)}`} />
                     <span>{repo.language || "JavaScript"}</span>
                   </div>
 

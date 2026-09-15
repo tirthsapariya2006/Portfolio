@@ -92,7 +92,7 @@ export const portfolioData: PortfolioData = {
     description: "Personal portfolio of Tirth Sapariya, a Full-Stack Developer building responsive, scalable, and user-focused web experiences using React.js, Next.js, Node.js, and MongoDB.",
     url: "https://tirthsapariya.dev", // Production domain placeholder - easily customizable
     ogImage: "/images/og-card.png",
-    resumePath: "/resume/tirth-sapariya-resume.pdf",
+    resumePath: "/resume/TirthResume2.0.pdf",
   },
 
   navItems: [
