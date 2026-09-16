@@ -33,7 +33,7 @@ export function Footer() {
                 </span>
               </div>
               <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
-                {portfolioData.personal.title} • React.js, Node.js & MongoDB
+                {portfolioData.personal.title} • React.js, Next.js, Node.js &amp; PostgreSQL
               </p>
             </div>
           </div>
@@ -54,8 +54,10 @@ export function Footer() {
             ))}
 
             <a
-              href={`mailto:${portfolioData.personal.email}`}
-              aria-label="Send email"
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(portfolioData.personal.email)}&su=${encodeURIComponent("Hello Tirth - From Portfolio")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Compose email to Tirth Sapariya on Gmail"
               className="p-2.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 hover:text-sky-500 dark:hover:text-sky-400 hover:border-sky-500/30 transition shadow-sm"
             >
               <Mail className="w-4 h-4" />

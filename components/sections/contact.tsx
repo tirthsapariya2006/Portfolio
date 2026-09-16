@@ -94,7 +94,7 @@ export function Contact() {
                     className="p-2 rounded-lg bg-white dark:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700 transition shrink-0"
                   >
                     {copiedEmail ? (
-                      <Check className="w-4 h-4 text-emerald-500" />
+                      <Check className="w-4 h-4" />
                     ) : (
                       <Copy className="w-4 h-4" />
                     )}
@@ -102,11 +102,13 @@ export function Contact() {
                 </div>
 
                 <a
-                  href={`mailto:${personal.email}?subject=Hello%20Tirth%20-%20From%20Portfolio`}
+                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personal.email)}&su=${encodeURIComponent("Project Inquiry - Tirth Sapariya")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-xs font-semibold text-white bg-sky-500 hover:bg-sky-600 transition shadow-sm"
                 >
                   <Mail className="w-3.5 h-3.5" />
-                  <span>Send Direct Email</span>
+                  <span>Send Direct Mail</span>
                 </a>
               </div>
 

@@ -21,7 +21,7 @@ export function Navbar() {
       if (!isHomePage) return;
 
       // Detect active section based on scroll position
-      const sections = ["hero", "about", "skills", "experience", "projects", "education", "problem-solving", "contact"];
+      const sections = ["hero", "about", "skills", "experience", "projects", "education", "contact"];
       const scrollPosition = window.scrollY + 120;
 
       for (const section of sections) {

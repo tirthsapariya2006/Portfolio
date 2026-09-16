@@ -7,10 +7,10 @@ export function About() {
   const { personal, education } = portfolioData;
 
   const highlights = [
-    "Developing responsive and scalable web applications",
-    "Writing clean, modular and maintainable code",
-    "Integrating full-stack stacks with React, Node.js and MongoDB",
-    "Constantly exploring emerging tools and best practices",
+    "Building full-stack apps with React, Next.js, Node.js & TypeScript",
+    "Designing robust databases using MongoDB & PostgreSQL",
+    "Developing clean REST APIs with Express & modern middleware",
+    "Writing clean, modular, and maintainable production code",
   ];
 
   return (
@@ -32,7 +32,14 @@ export function About() {
               </h3>
 
               <p className="text-zinc-600 dark:text-zinc-300 text-base sm:text-lg leading-relaxed">
-                {personal.bio}
+                Hi, I&apos;m <span className="font-semibold text-zinc-900 dark:text-white">Tirth Sapariya</span>, a web developer focused on building responsive and scalable applications. I work with technologies like{" "}
+                <span className="font-semibold text-zinc-900 dark:text-white">React.js</span>,{" "}
+                <span className="font-semibold text-zinc-900 dark:text-white">Next.js</span>,{" "}
+                <span className="font-semibold text-zinc-900 dark:text-white">TypeScript</span>,{" "}
+                <span className="font-semibold text-zinc-900 dark:text-white">Node.js</span>,{" "}
+                <span className="font-semibold text-zinc-900 dark:text-white">Express.js</span>,{" "}
+                <span className="font-semibold text-zinc-900 dark:text-white">MongoDB</span>, and{" "}
+                <span className="font-semibold text-zinc-900 dark:text-white">PostgreSQL</span> to develop clean, efficient, and user-friendly digital solutions. I constantly explore new tools, system patterns, and cloud platforms to improve my skills and build better projects.
               </p>
 
               <div className="pt-4 border-t border-zinc-200/60 dark:border-zinc-800/60 space-y-3">
@@ -76,15 +83,18 @@ export function About() {
             {/* Education Summary Card */}
             <div className="rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 p-6 backdrop-blur-md space-y-2">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-violet-500/10 text-violet-600 dark:text-violet-400 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-violet-500/10 text-violet-600 dark:text-violet-400 flex items-center justify-center shrink-0">
                   <GraduationCap className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-sm text-zinc-900 dark:text-zinc-100">
                     {education[0].degree}
                   </h4>
-                  <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                    {education[0].institution} • {education[0].duration}
+                  <p className="text-xs text-zinc-600 dark:text-zinc-400 font-medium">
+                    {education[0].institution}
+                  </p>
+                  <p className="text-[11px] text-zinc-400 dark:text-zinc-500">
+                    Kadi Sarva Vishwavidyalaya • {education[0].duration}
                   </p>
                 </div>
               </div>

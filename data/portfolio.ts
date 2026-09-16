@@ -80,7 +80,7 @@ export const portfolioData: PortfolioData = {
     name: "Tirth Sapariya",
     title: "Full-Stack Developer",
     email: "tirthsapariya07@gmail.com",
-    bio: "Hi, I’m Tirth Sapariya, a web developer focused on building responsive and scalable applications. I work with technologies like React.js, Node.js, and MongoDB to develop clean, efficient, and user-friendly digital solutions. I constantly explore new technologies to improve my skills and build better projects.",
+    bio: "Hi, I’m Tirth Sapariya, a web developer focused on building responsive and scalable applications. I work with technologies like React.js, Next.js, TypeScript, Node.js, Express.js, MongoDB, and PostgreSQL to develop clean, efficient, and user-friendly digital solutions. I constantly explore new tools, system patterns, and cloud platforms to improve my skills and build better projects.",
     shortBio: "Building responsive, scalable & user-focused web experiences with modern full-stack technologies.",
     experienceLevel: "3-Month Internship Experience",
     status: "Open to opportunities",
@@ -89,7 +89,7 @@ export const portfolioData: PortfolioData = {
 
   siteConfig: {
     title: "Tirth Sapariya | Full-Stack Developer",
-    description: "Personal portfolio of Tirth Sapariya, a Full-Stack Developer building responsive, scalable, and user-focused web experiences using React.js, Next.js, Node.js, and MongoDB.",
+    description: "Personal portfolio of Tirth Sapariya, a Full-Stack Developer building responsive, scalable, and user-focused web experiences using React.js, Next.js, TypeScript, Node.js, Express.js, MongoDB, and PostgreSQL.",
     url: "https://tirthsapariya.dev", // Production domain placeholder - easily customizable
     ogImage: "/images/og-card.png",
     resumePath: "/resume/TirthResume2.0.pdf",
@@ -141,6 +141,7 @@ export const portfolioData: PortfolioData = {
 
     // Database
     { name: "MongoDB", category: "Database", iconName: "mongodb", description: "NoSQL document database design & queries" },
+    { name: "PostgreSQL", category: "Database", iconName: "postgresql", description: "Relational database design, SQL querying & normalization" },
 
     // Tools
     { name: "Git", category: "Tools", iconName: "git", description: "Version control & collaborative development" },
@@ -205,7 +206,7 @@ export const portfolioData: PortfolioData = {
   education: [
     {
       degree: "Computer Engineering",
-      institution: "LDRP-ITR / KSV",
+      institution: "LDRP Institute of Technology and Research (KSV)",
       duration: "2023 – 2027",
       status: "Undergraduate Program",
     },

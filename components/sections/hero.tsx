@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, FileDown } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { portfolioData } from "@/data/portfolio";
 import { GithubIcon, LinkedinIcon, LeetcodeIcon } from "@/components/ui/social-icons";
 
 export function Hero() {
-  const { personal, socials, siteConfig } = portfolioData;
+  const { personal, socials } = portfolioData;
 
   const socialIcons: Record<string, React.ReactNode> = {
     github: <GithubIcon className="w-4 h-4" />,
@@ -22,6 +22,7 @@ export function Hero() {
     "Tailwind CSS",
     "Node.js",
     "MongoDB",
+    "PostgreSQL",
   ];
 
   return (
@@ -74,10 +75,14 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="text-sm sm:text-base md:text-lg text-zinc-600 dark:text-zinc-300 max-w-2xl leading-relaxed"
           >
-            Developing clean, efficient, and user-friendly digital solutions with technologies like{" "}
-            <span className="text-zinc-900 dark:text-white font-semibold">React.js</span>,{" "}
-            <span className="text-zinc-900 dark:text-white font-semibold">Node.js</span>, and{" "}
-            <span className="text-zinc-900 dark:text-white font-semibold">MongoDB</span>.
+            Developing clean, efficient, and user-friendly digital solutions. Explore my{" "}
+            <a
+              href="#skills"
+              className="inline-flex items-center gap-1.5 px-2.5 py-0.5 mx-1 rounded-full text-xs sm:text-sm font-semibold text-sky-600 dark:text-sky-400 bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/30 hover:border-sky-500/50 shadow-xs transition-all duration-200 group align-middle hover:-translate-y-0.5"
+            >
+              <span>Tech Stack</span>
+              <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
+            </a>
           </motion.p>
 
           {/* Core Tech Stack Badges */}
@@ -112,14 +117,13 @@ export function Hero() {
               <ArrowRight className="w-4 h-4" />
             </a>
 
-            <a
-              href={siteConfig.resumePath}
-              download
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm sm:text-base font-semibold text-zinc-800 dark:text-zinc-200 bg-white/80 dark:bg-zinc-900/80 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400"
+            {/* <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm sm:text-base font-semibold text-zinc-800 dark:text-zinc-200 bg-white/80 dark:bg-zinc-900/80 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50 hover:border-sky-500/40"
             >
-              <FileDown className="w-4 h-4 text-sky-500 dark:text-sky-400" />
-              <span>Download Resume</span>
-            </a>
+              <Mail className="w-4 h-4 text-sky-500 dark:text-sky-400" />
+              <span>Get In Touch</span>
+            </a> */}
           </motion.div>
 
           {/* Social Links */}

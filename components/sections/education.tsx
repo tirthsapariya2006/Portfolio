@@ -34,8 +34,11 @@ export function Education() {
                     <h3 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-zinc-100 mt-0.5">
                       {item.degree}
                     </h3>
-                    <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300 mt-1">
+                    <p className="text-sm sm:text-base font-semibold text-zinc-800 dark:text-zinc-200 mt-1">
                       {item.institution}
+                    </p>
+                    <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
+                      Affiliated with Kadi Sarva Vishwavidyalaya • Gandhinagar, Gujarat
                     </p>
                   </div>
                 </div>
