@@ -6,7 +6,7 @@ import { Skills } from "@/components/sections/skills";
 import { Experience } from "@/components/sections/experience";
 import { Projects } from "@/components/sections/projects";
 import { Education } from "@/components/sections/education";
-import { GithubShowcase } from "@/components/sections/github-showcase";
+import { ProblemSolving } from "@/components/sections/problem-solving";
 import { Contact } from "@/components/sections/contact";
 import { Footer } from "@/components/layout/footer";
 
@@ -22,7 +22,7 @@ export default function Home() {
         <Experience />
         <Projects />
         <Education />
-        <GithubShowcase />
+        <ProblemSolving />
         <Contact />
       </main>
 
